@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="login.css">
+    <title>登录页面</title>
+    <style>
+        /* 灰色字体是#999 */
+    </style>
+</head>
+
+<body>
+    <div class="big">
+        <!-- 最上面欢迎那里 -->
+        <div class="top">
+            <img src="https://misc.360buyimg.com/lib/img/e/logo-201305-b.png" alt="" class="logo">
+            <span></span>
+            <a href="https://surveys.jd.com/index.php?r=survey/index/sid/568245/lang/zh-Hans">
+                <b></b>
+                登录页面，调查问卷
+            </a>
+        </div>
+    </div>
+
+    <!-- 中间100%部分 -->
+    <div class="mid">
+        <div class="mid_top">
+            <p class="mid_top">
+                <i></i> 依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号验证！ 新版
+                <a href="https://about.jd.com/privacy/">《京东隐私政策》</a> 已上线，将更有利于保护您的个人隐私。</p>
+        </div>
+
+
+
+        <div class="mid_mid">
+
+            <!-- 主要登录界面 -->
+            <div class="kong">
+                <div class="login">
+                    <p>
+                        <i></i> 京东不会以任何理由要求您转账汇款，谨防诈骗。
+                    </p>
+                    <div class="login_a">
+                        <div class="login_sm">
+                            <a class="saoma" href="#Javascript" style="border-right: 1px solid #f4f4f4">扫码登录</a>
+                        </div>
+                        <div class="login_zh">
+                            <a class="zhanghu" href="#Javascript">账户登录</a>
+                        </div>
+                        <section style="clear: both;"></section>
+
+                        <!-- 账户登录 -->
+                        <form action="/user/login" id="zhdl">
+                            <label for="" class="user"></label>
+                            <input pattern="^[0-9a-zA-Z\u4e00-\u9fa5]{4,6}" required name="username" type="text" placeholder="邮箱/用户名/已验证手机">
+                            <label for="" class="psw"></label>
+                            <input required pattern="^.{4,6}" name="psw" type="text" placeholder="密码">
+                            <a href="" id="wjmm">忘记密码</a>
+                            <input type="submit" value="登&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;录" style="height: 33px; background-color: #e4393c; color: #fff; border: 1px solid #e85356; font-size: 20px;line-height: 33px;">
+                        </form>
+
+                        <!-- 扫码登录 -->
+                        <form action="" id="smdl">
+
+                            <div class="smdl_mid">
+                                <div class="help"></div>
+                                <div class="smdl_ma">
+                                    <img src="https://qr.m.jd.com/show?appid=133&size=147&t=1533863893954)" alt="">
+                                </div>
+                                <section style="clear: both;"></section>
+                                <p>打开
+                                    <a href="">手机京东</a> 扫描二维码</p>
+                                <p>
+                                    <b></b>
+                                    <span>免输入</span>
+                                    <b></b>
+                                    <span>更快</span>
+                                    <b></b>
+                                    <span>更安全</span>
+                                </p>
+                            </div>
+                        </form>
+                        <section style="clear: both;"></section>
+
+
+
+                        <div class="login_down">
+                            <div class="login_down_mid">
+                                <a href="" style="border-right: 1px solid #ccc">
+                                    <span id="qq"></span> QQ</a>
+                                <a href="">
+                                    <span id="weixin"></span> 微信</a>
+                                <a href="./zhuce.html" id="zhuce">
+                                    <span></span> 立即注册</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <!-- 页脚 -->
+    <div class="foot">
+        <div class="as">
+            <a href="https://www.jd.com/">关于我们</a>
+            <a href="http://about.jd.com/contact">联系我们</a>
+            <a href="http://zhaopin.jd.com/home;jsessionid=FF96E17356239B7DBB10CD84E0CF3B06.s1">人才招聘</a>
+            <a href="https://www.jd.com/">商家入驻</a>
+            <a href="https://www.jd.com/">广告服务</a>
+            <a href="https://app.jd.com/">手机京东</a>
+            <a href="https://club.jd.com/links.aspx">友情链接</a>
+            <a href="https://media.jd.com/">销售联盟</a>
+            <a href="https://sale.jd.com/act/n0hAvqy5CW8.html">京东社区</a>
+            <a href="https://gongyi.jd.com/">京东公益</a>
+            <a href="https://www.joybuy.com/" style="border: none">English Site</a>
+        </div>
+        <p>Copyright © 2004-2018 京东JD.com 版权所有</p>
+    </div>
+
+
+    <script src="./jquery-3.3.1.js"></script>
+    <script>
+        
+        //
+        var sm=1;
+        $('.zhanghu').click(function(e){
+            e.preventDefault();
+            sm=0;
+            $('form#zhdl').css('display','block');
+            $('form#smdl').css('display','none');
+            $('div.login_sm>a').css({
+                "color":"#666",
+                "font-weight":"400"
+            })
+            $('div.login_zh>a').css({
+                "color":"rgb(175, 0, 0)",
+                "font-weight":"bold"
+            })
+        })
+        $('.saoma').click(function(e){
+            e.preventDefault();
+            sm=1;
+            $('form#zhdl').css('display','none');
+            $('form#smdl').css('display','block');
+            $('div.login_zh>a').css({
+                "color":"#666",
+                "font-weight":"400"
+            })
+            $('div.login_sm>a').css({
+                "color":"rgb(175, 0, 0)",
+                "font-weight":"bold"
+            })
+        })
+
+        //鼠标移入移出 
+        $('.smdl_ma').hover(function(){
+            $('div.login_sm>a').css({
+                "color": "rgb(175, 0, 0)",
+                "font-weight": "bold"
+            })
+            },function(){
+                if(sm==0){
+                $('div.login_sm>a').css({
+                "color": "#666",
+                "font-weight": "400"
+            })
+        }
+            })
+
+         $('.zhanghu').hover(function(){
+            $('div.login_zh>a').css({
+                "color": "rgb(175, 0, 0)",
+                "font-weight": "bold"
+            })
+            },function(){
+                if(sm==1){
+                $('div.login_zh>a').css({
+                "color": "#666",
+                "font-weight": "400"
+            })
+        }
+            })
+
+        
+        $('div.smdl_ma').hover(function(){
+           $(' div.smdl_ma').animate({
+               margin: '0px',
+           },function(){
+               $('div.help').css('display','block')
+           })
+           
+        },function(){
+            $(' div.smdl_ma').stop()
+            $('div.help').css('display','none')
+            $(' div.smdl_ma').animate({
+               margin: '0 0 0 80px' 
+           })
+        })
+
+        // 登录
+        $('form').submit(function(e){
+            e.preventDefault();
+            console.log(1);
+            $.post(this.action,$(this).serialize(),function(data){
+              $('.modal-body').html(data.msg)
+              if(data.code==1){
+                alert('登录成功')
+                    location.href='主页.html'
+                
+              }
+              if(data.code==0){
+               alert('账号不存在，请注册')
+                    location.href='zhuce.html'
+                
+              }
+              if(data.code==2){
+                $('#myModal').modal('show').on('hide.bs.modal',function(){
+                    alert('密码错误')
+                    location.reload();
+                })
+              }
+             
+            })
+        })
+        
+    </script>
+
+
+</body>
+
+</html>

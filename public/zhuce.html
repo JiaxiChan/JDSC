@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="zhuce.css">
+    <title>个人注册</title>
+</head>
+
+<body>
+
+    <div class="head">
+        <div class="head_mid">
+            <a href=""></a>
+            <div class="b">欢迎注册</div>
+            <div class="head_right">
+                已有账号？
+                <a href="./login.html">请登录></a>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 中间 -->
+    <div class="main" style="position: relative;">
+        <span class="disan chenggong"></span>
+        <!-- 步骤 -->
+        <div class="num chenggong">
+            <div class="num_first" style="margin: 0;">
+                <span class="one">1</span>
+                <p class="one">验证手机号</p>
+            </div>
+            <div class="line ott" style="margin: 0;"></div>
+            <div class="num_twice">
+                <span class="two">2</span>
+                <p class="two">填写账号信息</p>
+            </div>
+            <div class="line ttt" style="margin: 0;"></div>
+            <div class="num_third" style="float: right;">
+                <span class="three">3</span>
+                <p class="three">注册成功</p>
+            </div>
+        </div>
+
+        <!-- 表单 -->
+        <div class="main_form chenggong">
+            <form action="/user/register">
+                <label for="" class="dier"></label> <input type="text" placeholder="建议使用常用手机号" class="phone dier" >
+                <input type="button" value="点击按钮进行验证" class="check">
+
+                
+                <label for="" class="check_ma_qian dier" >手机验证码</label> <input style="display: none;" type="input" placeholder="请输入验证码" class="check_ma dier"><label for="" class="check_ma_hou dier">
+                    <!-- <span>60</span>s后重新获取 -->
+                    <a href="#javascript" class="dier">点击获取验证码</a>
+                </label>
+
+                <div class="shouji">ⓧ 验证完成后，你可以使用该手机登陆或找回密码</div>
+                <div class="yanzheng">ⓧ 验证码已发送，1分钟内输入有效(别等了直接下一步吧)</div>
+
+                <!-- 第二部分 -->
+                <label for="" class="disan yhm"> 用 户 名 </label>
+                <input pattern="^[0-9a-zA-Z\u4e00-\u9fa5]{4,6}" name="username" type="text" class="disan yhm dd" placeholder="您的账户名和登录名" required>
+
+                <label for="" style="top: 90px;left: 15px;" class="disan yhm"> 设 置 密 码  </label>
+                <input required pattern="^.{4,6}" name="psw" type="password" class="disan yhm dd" placeholder="请输入您要设置的密码">
+
+                <label for="" style="top: 164px;left: 15px;" class="disan yhm"> 确 认 密 码  </label>
+                <input name="check_psw" type="password" class="disan yhm dd" placeholder="请再次输入密码">
+
+                
+            
+
+                <input type="submit" class="submit dier ss" value="下一步">
+                <input type="submit" class="submit disan" value="立即注册">
+                <section class="chenggong">
+                    <a href="" style="float: left;"><span style=" background-position: 0 -160px;"></span>企业用户注册</a>
+                    <a href="" style="float: right;"><span style=" background-position: -40px -160px;"></span>国际站注册</a>
+                </section>
+            </form>
+        </div>
+
+
+
+    </div>
+    <section></section>
+
+
+    <!-- 页脚 -->
+    <div class="yejiao">
+    <div class="foot">
+            <div class="as">
+                <a href="https://www.jd.com/">关于我们</a>
+                <a href="http://about.jd.com/contact">联系我们</a>
+                <a href="http://zhaopin.jd.com/home;jsessionid=FF96E17356239B7DBB10CD84E0CF3B06.s1">人才招聘</a>
+                <a href="https://www.jd.com/">商家入驻</a>
+                <a href="https://www.jd.com/">广告服务</a>
+                <a href="https://app.jd.com/">手机京东</a>
+                <a href="https://club.jd.com/links.aspx">友情链接</a>
+                <a href="https://media.jd.com/">销售联盟</a>
+                <a href="https://sale.jd.com/act/n0hAvqy5CW8.html">京东社区</a>
+                <a href="https://gongyi.jd.com/">京东公益</a>
+                <a href="https://www.joybuy.com/" style="border: none">English Site</a>
+            </div>
+            <p>Copyright © 2004-2018 京东JD.com 版权所有</p>
+        </div>
+    </div>
+
+
+
+
+</body>
+<script src="./jquery-3.3.1.js"></script>
+<script src="./zhuce.js"></script>
+
+</html>
